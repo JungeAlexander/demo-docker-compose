@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    build: responder_app/
+    ports:
+     - "4000:80"
+  jnb:
+    image: "jupyter/scipy-notebook:7254cdcfa22b"
+    ports:
+     - "10000:8888"

@@ -22,3 +22,7 @@ docker run --rm -p 4000:80 responderpredict
 ```
 
 Open e.g. http://127.0.0.1:4000/predict/1.1 in browser.
+
+TODO next:
+
+follow docker compose tutorial with the goal to make containers talk to each other.
