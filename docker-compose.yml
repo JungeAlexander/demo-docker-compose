@@ -8,3 +8,5 @@ services:
     image: "jupyter/scipy-notebook:7254cdcfa22b"
     ports:
      - "10000:8888"
+    volumes:
+     - .:/home/jovyan/work
