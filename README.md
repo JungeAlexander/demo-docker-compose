@@ -29,6 +29,8 @@ To run Docker Compose:
 docker-compose up
 ```
 
-TODO next:
+TODO:
 
-follow docker compose tutorial with the goal to make containers talk to each other.
+- add postgres DB with data
+- test DB from jnb
+- add dash thingy that reads data from DB, runs through API and shows to user
