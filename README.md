@@ -31,6 +31,10 @@ docker-compose up
 
 TODO:
 
-- add postgres DB with data
+- fill postgres DB with persistent data
+  - create/change superuser and pw
+  - create read-only guest user
+  - https://docs.docker.com/compose/environment-variables/#the-env-file
+  - https://hub.docker.com/_/postgres/
 - test DB from jnb
 - add dash thingy that reads data from DB, runs through API and shows to user
