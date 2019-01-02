@@ -3,19 +3,19 @@ services:
   api:
     build: responder_app/
     ports:
-     - "4000:80"
+      - "4000:80"
   jnb:
     image: "jupyter/scipy-notebook:7254cdcfa22b"
     ports:
-     - "10000:8888"
+      - "10000:8888"
     volumes:
-     - .:/home/jovyan/work
+      - .:/home/jovyan/work
   db:
     image: postgres:11.1-alpine
     ports:
       - "8001:5432"
     volumes:
-     - pg_volume:/var/lib/postgresql
+      - pg_volume:/var/lib/postgresql
 
-  volumes:
-    pg_volume
+volumes:
+  pg_volume:
