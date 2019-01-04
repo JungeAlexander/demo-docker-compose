@@ -29,6 +29,12 @@ To run Docker Compose:
 docker-compose up
 ```
 
+To get rid of unused volumes:
+
+```
+docker volume prune
+```
+
 TODO:
 
 - fill postgres DB with persistent data
@@ -36,5 +42,8 @@ TODO:
   - create read-only guest user
   - https://docs.docker.com/compose/environment-variables/#the-env-file
   - https://hub.docker.com/_/postgres/
+  - fill with data.tsv
+  - check if data are persistent between up/downs
+  - how to volumes relate to container memory?
 - test DB from jnb
 - add dash thingy that reads data from DB, runs through API and shows to user
