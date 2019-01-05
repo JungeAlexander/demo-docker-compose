@@ -35,8 +35,19 @@ To get rid of unused volumes:
 docker volume prune
 ```
 
+To query database:
+
+```
+import pandas as pd
+from sqlalchemy import create_engine
+
+engine = create_engine('postgresql://guest@localhost:8001/shared')
+df = pd.read_sql_query('select * from data', con=engine)
+```
+
 TODO:
 
+- fix the above
 - fill postgres DB with persistent data
    docker exec 9b449048ca2d psql -U guest -d shared
   - create/change superuser and pw
