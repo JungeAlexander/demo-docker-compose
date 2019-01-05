@@ -38,6 +38,7 @@ docker volume prune
 TODO:
 
 - fill postgres DB with persistent data
+   docker exec 9b449048ca2d psql -U guest -d shared
   - create/change superuser and pw
   - create read-only guest user
   - https://docs.docker.com/compose/environment-variables/#the-env-file
