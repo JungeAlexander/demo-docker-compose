@@ -47,15 +47,11 @@ df = pd.read_sql_query('select * from data', con=engine)
 
 TODO:
 
-- fix the above
-- fill postgres DB with persistent data
-   docker exec 9b449048ca2d psql -U guest -d shared
+- add dash thingy that reads data from DB, runs through API and shows to user
+- psql questions
   - create/change superuser and pw
   - create read-only guest user
   - https://docs.docker.com/compose/environment-variables/#the-env-file
   - https://hub.docker.com/_/postgres/
-  - fill with data.tsv
   - check if data are persistent between up/downs
   - how to volumes relate to container memory?
-- test DB from jnb
-- add dash thingy that reads data from DB, runs through API and shows to user
