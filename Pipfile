@@ -9,6 +9,10 @@ verify_ssl = true
 sqlalchemy = "*"
 psycopg2 = "*"
 pandas = "*"
+dash = "==0.34.0"
+dash-html-components = "==0.13.4"
+dash-core-components = "==0.42.0"
+dash-table = "==3.1.11"
 
 [requires]
 python_version = "3.7"
