@@ -43,11 +43,19 @@ from sqlalchemy import create_engine
 
 engine = create_engine('postgresql://guest@localhost:8001/shared')
 df = pd.read_sql_query('select * from data', con=engine)
+df
+#     id label  score
+# 0    1     A   0.50
+# 1    2     A   0.60
+# 2    3     A   0.70
+# [...]
 ```
 
 TODO:
 
-- add dash thingy that reads data from DB, runs through API and shows to user
+- dash
+  - run through API
+  - package in container
 - psql questions
   - create/change superuser and pw
   - create read-only guest user

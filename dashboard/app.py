@@ -2,6 +2,11 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+import pandas as pd
+from sqlalchemy import create_engine
+
+engine = create_engine('postgresql://guest@localhost:8001/shared')
+df = pd.read_sql_query('select * from data', con=engine)
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -18,8 +23,7 @@ app.layout = html.Div(children=[
         id='example-graph',
         figure={
             'data': [
-                {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
-                {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
+                {'x': df['id'], 'y': df['score'], 'type': 'bar', 'name': 'Test'},
             ],
             'layout': {
                 'title': 'Dash Data Visualization'
