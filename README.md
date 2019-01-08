@@ -54,7 +54,6 @@ df
 TODO:
 
 - dash
-  - run through API
   - package in container
 - psql questions
   - create/change superuser and pw
