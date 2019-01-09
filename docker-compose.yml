@@ -17,6 +17,10 @@ services:
     volumes:
       - ./services/postgres/:/docker-entrypoint-initdb.d/
       - pg_volume:/var/lib/postgresql
+  dash:
+    build: dashboard/
+    ports:
+      - "8002:8050"
 
 volumes:
   pg_volume:

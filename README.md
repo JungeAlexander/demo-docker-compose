@@ -23,6 +23,24 @@ docker run --rm -p 4000:80 responderpredict
 
 Open e.g. http://127.0.0.1:4000/predict/1.1 in browser.
 
+Start dash app:
+
+```
+cd dashboard
+python app.py
+```
+
+Open e.g. http://127.0.0.1:5042/predict/1.1 in browser.
+
+Build a Docker image containing the app and start a container:
+
+```
+docker build -t mydash .
+docker run --rm -p 8002:8050 mydash
+```
+
+Open e.g. http://127.0.0.1:8002/ in browser.
+
 To run Docker Compose:
 
 ```
@@ -62,3 +80,4 @@ TODO:
   - https://hub.docker.com/_/postgres/
   - check if data are persistent between up/downs
   - how to volumes relate to container memory?
+- check what else was presented in beyond jnb talk
