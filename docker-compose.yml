@@ -19,6 +19,8 @@ services:
       - pg_volume:/var/lib/postgresql
   dash:
     build: dashboard/
+    depends_on:
+      - db
     ports:
       - "8002:8050"
 
