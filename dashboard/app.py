@@ -11,9 +11,9 @@ from sqlalchemy.exc import OperationalError
 
 logging.basicConfig(level=logging.INFO)
 
-engine = create_engine('postgresql://guest@localhost:8001/shared')
+engine = create_engine('postgresql://guest@db:5432/shared')
 num_tries = 3
-current_tries = 0
+current_tries = 1
 df = None
 while True:
     logging.info(f"Trying to connect to psql DB. Try {current_tries}.")
@@ -29,7 +29,7 @@ while True:
 
 predictions = []
 for val in df['score']:
-    r = requests.get(f'http://127.0.0.1:4000/predict/{val}')
+    r = requests.get(f'http://api:80/predict/{val}')
     predictions.append(float(r.text))
 df['prediction'] = predictions
 

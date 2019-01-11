@@ -44,7 +44,7 @@ Open e.g. http://127.0.0.1:8002/ in browser.
 To run Docker Compose:
 
 ```
-docker-compose up
+docker-compose up --build
 ```
 
 To get rid of unused volumes:
@@ -53,26 +53,24 @@ To get rid of unused volumes:
 docker volume prune
 ```
 
-To query database:
+To open Jupyter lab inside Compose:
 
 ```
-import pandas as pd
-from sqlalchemy import create_engine
+http://127.0.0.1:10000
+```
 
-engine = create_engine('postgresql://guest@localhost:8001/shared')
-df = pd.read_sql_query('select * from data', con=engine)
-df
-#     id label  score
-# 0    1     A   0.50
-# 1    2     A   0.60
-# 2    3     A   0.70
-# [...]
+To open dashboard inside Compose:
+
+```
+127.0.0.1:8002
 ```
 
 TODO:
 
 - dash
-  - package in container
+  - why not working in Compose?
+     - try swapping port with jupyter notebook
+     - this workd inside non-Compose container, or?
 - psql questions
   - create/change superuser and pw
   - create read-only guest user
@@ -80,4 +78,5 @@ TODO:
   - https://hub.docker.com/_/postgres/
   - check if data are persistent between up/downs
   - how to volumes relate to container memory?
+  - write to DB using jupyter nb and see if data persistent across runs
 - check what else was presented in beyond jnb talk
