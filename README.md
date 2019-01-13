@@ -78,3 +78,4 @@ TODO:
   - how to volumes relate to container memory?
   - write to DB using jupyter nb and see if data persistent across runs
 - check what else was presented in beyond jnb talk
+- use tf model in API?
