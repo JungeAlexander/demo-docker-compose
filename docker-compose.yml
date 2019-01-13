@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     ports:
-      - "8002:8050"
+      - "8050:8050"
 
 volumes:
   pg_volume:

@@ -68,9 +68,7 @@ To open dashboard inside Compose:
 TODO:
 
 - dash
-  - why not working in Compose?
-     - try swapping port with jupyter notebook
-     - this workd inside non-Compose container, or?
+  - test in compose
 - psql questions
   - create/change superuser and pw
   - create read-only guest user
