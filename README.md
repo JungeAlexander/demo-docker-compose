@@ -67,8 +67,6 @@ To open dashboard inside Compose:
 
 TODO:
 
-- dash
-  - test in compose
 - psql questions
   - create/change superuser and pw
   - create read-only guest user
@@ -79,3 +77,6 @@ TODO:
   - write to DB using jupyter nb and see if data persistent across runs
 - check what else was presented in beyond jnb talk
 - use tf model in API?
+- README:
+   - describe components
+   - keep text above 
