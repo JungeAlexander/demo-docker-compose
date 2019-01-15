@@ -68,13 +68,12 @@ To open dashboard inside Compose:
 TODO:
 
 - psql questions
+  - write to DB using jupyter nb and see if data persistent across runs -> see write_db.ipynb
   - create/change superuser and pw
   - create read-only guest user
   - https://docs.docker.com/compose/environment-variables/#the-env-file
   - https://hub.docker.com/_/postgres/
-  - check if data are persistent between up/downs
   - how to volumes relate to container memory?
-  - write to DB using jupyter nb and see if data persistent across runs
 - check what else was presented in beyond jnb talk
 - use tf model in API?
 - README:
