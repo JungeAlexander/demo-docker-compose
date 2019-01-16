@@ -68,9 +68,9 @@ To open dashboard inside Compose:
 TODO:
 
 - psql questions
+  - test with shared user and DB
   - write to DB using jupyter nb and see if data persistent across runs -> see write_db.ipynb
   - create/change superuser and pw
-  - create read-only guest user
   - https://docs.docker.com/compose/environment-variables/#the-env-file
   - https://hub.docker.com/_/postgres/
   - how to volumes relate to container memory?

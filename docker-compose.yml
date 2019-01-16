@@ -10,6 +10,8 @@ services:
       - "10000:8888"
     volumes:
       - .:/home/jovyan/work
+    env:
+      - ./config/shared_database.env
   db:
     image: postgres:11.1-alpine
     ports:
@@ -17,6 +19,8 @@ services:
     volumes:
       - ./services/postgres/:/docker-entrypoint-initdb.d/
       - pg_volume:/var/lib/postgresql
+    env:
+      - ./config/shared_database.env
   dash:
     build: dashboard/
     depends_on:
