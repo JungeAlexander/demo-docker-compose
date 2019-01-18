@@ -67,12 +67,10 @@ To open dashboard inside Compose:
 
 TODO:
 
-- psql questions
-  - see if data persistent across runs -> see write_db.ipynb
-    - how to volumes relate to container memory?
-  - create/change superuser and pw
-- check what else was presented in beyond jnb talk
-- use tf model in API?
 - README:
    - describe components
    - keep text above 
+- how do docker volumes relate to containers and persistance
+- check what else was presented in beyond jnb talk
+- use tf model in API?
+
