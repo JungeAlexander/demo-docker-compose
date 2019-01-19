@@ -1,4 +1,24 @@
-Docker for data science workflows
+# Docker Compose Demo
+
+## Usage
+
+To run Docker Compose:
+
+```
+docker-compose up --build
+```
+
+Shutdown and remove containers
+
+To get rid of unused volumes:
+
+```
+docker volume prune
+```
+
+## Misc
+
+Jupyter notebook
 
 ```
 docker run --rm -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work jupyter/scipy-notebook:7254cdcfa22b
@@ -41,17 +61,7 @@ docker run --rm -p 8002:8050 mydash
 
 Open e.g. http://127.0.0.1:8002/ in browser.
 
-To run Docker Compose:
 
-```
-docker-compose up --build
-```
-
-To get rid of unused volumes:
-
-```
-docker volume prune
-```
 
 To open Jupyter lab inside Compose:
 
@@ -65,11 +75,11 @@ To open dashboard inside Compose:
 127.0.0.1:8002
 ```
 
-TODO:
+## TODO:
 
 - README:
    - describe components
-   - keep text above 
+   - keep text above?
 - how do docker volumes relate to containers and persistance
 - check what else was presented in beyond jnb talk
 - use tf model in API?
