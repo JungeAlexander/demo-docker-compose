@@ -1,5 +1,14 @@
 # Docker Compose Demo
 
+[Docker Compose](https://docs.docker.com/compose/) allows users to orchestrate multiple [Docker](https://www.docker.com/) containers that can talk to one another.
+
+This repository contains a `docker-compose.yml` file starting the following containers:
+
+- `db` - a [PostgreSQL](https://www.postgresql.org/) database housing data
+- `api` -  a mock prediction API (built using [responder](https://python-responder.org/en/latest/)). In a real world setting this could for instance run an into data point through a previously trained machine learning model and return a prediction.
+- `dash` - a simple [Dash](https://dash.plot.ly/) dashboard that reads data from `db` and runs them to the prediction `api`.
+- `jnb`- a [Jupyter lab](https://jupyterlab.readthedocs.io/en/stable/) environment to run Jupyter notebooks beind able to read/write data from `db`, run data through the `api` and so on.
+
 ## Usage
 
 To run Docker Compose:
@@ -8,79 +17,17 @@ To run Docker Compose:
 docker-compose up --build
 ```
 
-Shutdown and remove containers
-
-To get rid of unused volumes:
+Shutdown and remove containers:
 
 ```
-docker volume prune
-```
-
-## Misc
-
-Jupyter notebook
-
-```
-docker run --rm -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work jupyter/scipy-notebook:7254cdcfa22b
-```
-
-Start responder app:
-
-```
-cd responder_app/
-pipenv shell
-python app.py
-```
-
-Open e.g. http://127.0.0.1:5042/predict/1.1 in browser.
-
-Build a Docker image containing the app and start a container:
-
-```
-docker build -t responderpredict .
-docker run --rm -p 4000:80 responderpredict
-```
-
-Open e.g. http://127.0.0.1:4000/predict/1.1 in browser.
-
-Start dash app:
-
-```
-cd dashboard
-python app.py
-```
-
-Open e.g. http://127.0.0.1:5042/predict/1.1 in browser.
-
-Build a Docker image containing the app and start a container:
-
-```
-docker build -t mydash .
-docker run --rm -p 8002:8050 mydash
-```
-
-Open e.g. http://127.0.0.1:8002/ in browser.
-
-
-
-To open Jupyter lab inside Compose:
-
-```
-http://127.0.0.1:10000
-```
-
-To open dashboard inside Compose:
-
-```
-127.0.0.1:8002
+docker-compose down
 ```
 
 ## TODO:
 
 - README:
-   - describe components
-   - keep text above?
-- how do docker volumes relate to containers and persistance
-- check what else was presented in beyond jnb talk
-- use tf model in API?
+   - describe components in more detail
+- how do volumes relate to containers? what about persistance?
+- add more container components?
+- show how to use a simple, pretrained tf model from tf hub in API?
 
