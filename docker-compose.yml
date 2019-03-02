@@ -27,6 +27,19 @@ services:
       - db
     ports:
       - "8050:8050"
+  airflow:
+    image: puckel/docker-airflow:1.10.2
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    env_file:
+      - ./config/airflow_container.env
+      - ./config/shared_database.env
+    volumes:
+      - ./config/requirements.txt:/requirements.txt
+      - ./dags/:/usr/local/airflow/dags
+    command: webserver
 
 volumes:
   pg_volume:
