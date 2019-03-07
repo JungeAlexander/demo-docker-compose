@@ -21,15 +21,27 @@ The Jupyter lab server is available at: http://127.0.0.1:10000/lab
 
 The dashboard is then available at: http://127.0.0.1:8050/
 
+Airflow is available at: http://127.0.0.1:8080
+
 Shutdown and remove containers:
 
 ```
 docker-compose down
 ```
 
+## To clean up unused containers, images, networks
+
+```
+docker system prune
+```
+
+Adding `--volumes` also removes volumes.
+
 ## TODO?
 
-- airflow DB setup?
+- airflow works? example dag!
+- spark? kafka?
+ using https://jupyter-docker-stacks.readthedocs.io/en/latest/using/specifics.html#apache-spark?
 - fancier dashboard?
 - how do volumes relate to containers? what about persistance?
 - add more container components?

@@ -12,6 +12,8 @@ services:
       - .:/home/jovyan/work
     env_file:
       - ./config/shared_database.env
+      - ./config/jupyter.env
+    entrypoint: sh -c 'start-notebook.sh --NotebookApp.token=$$JUPYTER_PASSWORD'
   postgres:
     image: postgres:11.1-alpine
     ports:
