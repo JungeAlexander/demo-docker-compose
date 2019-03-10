@@ -12,7 +12,7 @@ from sqlalchemy.exc import OperationalError
 logging.basicConfig(level=logging.INFO)
 
 #df = pd.DataFrame({'id': [1,2,3], 'score': [0.5, 1.0, 1.5], 'prediction': [-0.5, -1.0, -1.5]})
-engine = create_engine('postgresql://guest@db:5432/shared')
+engine = create_engine('postgresql://guest@postgres:5432/shared')
 num_tries = 3
 current_tries = 1
 df = None
