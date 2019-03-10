@@ -39,9 +39,10 @@ Adding `--volumes` also removes volumes.
 
 ## TODO?
 
-- airflow works? example dag!
-- spark? kafka?
+- spark
  using https://jupyter-docker-stacks.readthedocs.io/en/latest/using/specifics.html#apache-spark?
+- kafka
+- airflow job to retrain models
 - fancier dashboard?
 - how do volumes relate to containers? what about persistance?
 - add more container components?
