@@ -24,6 +24,7 @@ services:
     env_file:
       - ./config/shared_database.env
       - ./config/airflow_database.env
+      - ./config/superset_database.env
   dash:
     build: dashboard/
     depends_on:
@@ -43,6 +44,15 @@ services:
       - ./config/requirements.txt:/requirements.txt
       - ./dags/:/usr/local/airflow/dags
     command: webserver
+  superset:
+    image: amancevice/superset:0.34.1
+    ports:
+      - "8088:8088"
+    depends_on:
+        - postgres
+    env_file:
+        - ./config/superset_container.env
+        - ./config/superset_database.env
 
 volumes:
   pg_volume:
