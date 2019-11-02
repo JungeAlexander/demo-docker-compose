@@ -1,7 +1,7 @@
-dash==0.34.0
-dash-html-components==0.13.4
-dash-core-components==0.42.0
-dash-table==3.1.11
-pandas==0.23.4
-psycopg2==2.7.6.1
-sqlalchemy==1.2.16
+dash
+dash-html-components
+dash-core-components
+dash-table
+pandas
+psycopg2
+sqlalchemy
