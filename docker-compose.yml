@@ -15,12 +15,13 @@ services:
       - ./config/jupyter.env
     entrypoint: sh -c 'start-notebook.sh --NotebookApp.token=$$JUPYTER_PASSWORD'
   postgres:
-    image: postgres:11.5-alpine
+    image: postgres:12.0-alpine
     ports:
       - "8001:5432"
     volumes:
       - ./services/postgres/:/docker-entrypoint-initdb.d/
       - pg_volume:/var/lib/postgresql
+      - ./data/:/import_data/
     env_file:
       - ./config/shared_database.env
       - ./config/airflow_database.env
