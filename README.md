@@ -23,6 +23,8 @@ The dashboard is then available at: http://127.0.0.1:8050/
 
 Airflow is available at: http://127.0.0.1:8080
 
+Superset is available at: http://127.0.0.1:8088
+
 Shutdown and remove containers:
 
 ```

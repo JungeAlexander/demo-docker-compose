@@ -5,7 +5,7 @@ services:
     ports:
       - "4000:80"
   jnb:
-    image: "jupyter/scipy-notebook:7254cdcfa22b"
+    image: "jupyter/scipy-notebook:1386e2046833"
     ports:
       - "10000:8888"
     volumes:
@@ -15,7 +15,7 @@ services:
       - ./config/jupyter.env
     entrypoint: sh -c 'start-notebook.sh --NotebookApp.token=$$JUPYTER_PASSWORD'
   postgres:
-    image: postgres:11.1-alpine
+    image: postgres:11.5-alpine
     ports:
       - "8001:5432"
     volumes:
@@ -32,7 +32,7 @@ services:
     ports:
       - "8050:8050"
   airflow:
-    image: puckel/docker-airflow:1.10.2
+    image: puckel/docker-airflow:1.10.4
     ports:
       - "8080:8080"
     depends_on:

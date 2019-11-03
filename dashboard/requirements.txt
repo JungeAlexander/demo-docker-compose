@@ -4,4 +4,5 @@ dash-core-components
 dash-table
 pandas
 psycopg2
+requests
 sqlalchemy
