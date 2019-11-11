@@ -2,3 +2,8 @@
 .python-version
 
 __pycache__/
+data/bbbp/
+data/clintox/
+data/sider/
+data/tox21/
+data/toxcast/
