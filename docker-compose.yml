@@ -5,9 +5,10 @@ services:
     ports:
       - "4000:80"
   jnb:
-    image: "jupyter/scipy-notebook:1386e2046833"
+    image: "jupyter/all-spark-notebook:814ef10d64fb"
     ports:
       - "10000:8888"
+      - "4040:4040"
     volumes:
       - .:/home/jovyan/work
     env_file:
