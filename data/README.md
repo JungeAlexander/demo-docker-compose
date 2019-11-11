@@ -1,3 +1,4 @@
-`tox21/` from downloaded from MoleculeNet on 20191103: https://s3-us-west-1.amazonaws.com/deepchem.io/datasets/molnet_publish/tox21.zip
+Physiology datasets in `bbbp/`, `clintox/`, `sider/`,
+`tox21/`, and `toxcast` downloaded and unzipped from MoleculeNet on 2019111.
 
 `json/` contains testing json data.
