@@ -5,7 +5,7 @@ services:
     ports:
       - "4000:80"
   jnb:
-    image: "jupyter/all-spark-notebook:814ef10d64fb"
+    build: jupyter_lab/
     ports:
       - "10000:8888"
       - "4040:4040"
